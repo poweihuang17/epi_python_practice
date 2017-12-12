@@ -12,7 +12,9 @@ def compute_tower_hanoi(num_rings):
 
 	NUM_PEGS=3
 	pegs=[list( reversed( range(1,num_rings+1) ))] + [[] for _ in range(1, NUM_PEGS)]
+	print(pegs)
 	print(hanoi_problem(num_rings,0,1,2))
+	print(pegs)
 
 compute_tower_hanoi(3)
  
