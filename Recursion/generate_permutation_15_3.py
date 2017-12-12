@@ -25,6 +25,7 @@ myresult=permutations_1([1,2,3,4,5])
 print myresult
 print len(myresult)
 
+#Use next permutation to find all permutation.
 #def permutation_2(A):
 
 
