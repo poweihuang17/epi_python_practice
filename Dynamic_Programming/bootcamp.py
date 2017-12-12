@@ -1,3 +1,5 @@
+import itertools
+
 def fibonacci(n, cache={}):
 	if n<=1:
 		return n
@@ -5,7 +7,7 @@ def fibonacci(n, cache={}):
 		return fibonacci(n-1,cache)+fibonacci(n-2, cache)
 	return cache[n]
 
-print fibonacci(5)
+#print fibonacci(5)
 
 
 def fibonacci_2(n):
@@ -21,5 +23,15 @@ def fibonacci_2(n):
 
 	return f_minus_1
 
-print fibonacci_2(5)
+#print fibonacci_2(5)
+
+def find_maximum_subarray(A):
+	min_sum=max_sum=0
+	for running_sum in itertools.accumulate(A):
+		min_sum=min(min_sum, running_sum)
+		max_sum=max(max_sum, running_sum-min_sum)
+
+	return max_sum
+
+print(find_maximum_subarray([904,40,523,12,-335, -385,-124, 481, -31]))
 
