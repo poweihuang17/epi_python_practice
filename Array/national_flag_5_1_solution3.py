@@ -1,5 +1,6 @@
 #Why this solution is O(n)? Why the previous solution is O(n^2)?
 #Because we find it repetitively. We should use double index to find!
+#Why this solution is better than solution2? I still don't know...
 
 RED, WHITE, BLUE= range(3)
 
